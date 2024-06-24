@@ -37,8 +37,11 @@ function sendSearchRequest(query) {
 
 function addNewMap(data) {
 
-    var mapFusion = document.getElementById('fusion');
+    var mapFusion = document.getElementById('fusionResult');
     mapFusion.innerHTML = null;
+
+    var mapFusionI = document.getElementById('fusionImplication');
+    mapFusionI.innerHTML = null;
 
     var infoItem = document.getElementById('infoItem');
     infoItem.innerHTML = null;
@@ -48,7 +51,9 @@ function addNewMap(data) {
     var i = 1;
 
     data.forEach(reponse => {
-        if (i == 1){
+        if (i == 1) {
+
+            infoItem.style.background = "#e0e0e0"
 
             infoItem.innerHTML += `
             <div id="firstInfoItem">
@@ -64,22 +69,55 @@ function addNewMap(data) {
             `;
 
 
+        } else if (i == 2) {
 
-        } else {
+            if (reponse.length !== 0){
 
-            reponse.forEach(fusion => {
+                mapFusion.innerHTML += `
+                    <h3>Obtention</h3>
+                `;
+
+                reponse.forEach(fusion => {
 
                     mapFusion.innerHTML += `
-            <div class="map">
-                <h4 class="tierName">Tier ${fusion.tier}</h4>
-                <img class="item item1" src="textures/items/${fusion.item1}" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
-                <img class="item item2" src="textures/items/${fusion.item2}" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
-                <img class="item itemResult" src="textures/items/${fusion.itemResult}" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
-                <img class="item itemFuel" src="textures/items/${fusion.itemFuel}" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
-            </div>
-            `;
+                <div class="map">
+                    <h4 class="tierName">Tier ${fusion.tier}</h4>
+                    <img class="item item1" src="textures/items/${fusion.item1}" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
+                    <img class="item item2" src="textures/items/${fusion.item2}" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
+                    <img class="item itemResult" src="textures/items/${fusion.itemResult}" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
+                    <img class="item itemFuel" src="textures/items/${fusion.itemFuel}" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
+                </div>
+                `;
 
-            });
+                });
+
+            }
+
+        } else if (i == 3) {
+
+
+            if (reponse.length !== 0){
+
+                mapFusionI.innerHTML += `
+                    <h3>Usage</h3>
+                `;
+
+                reponse.forEach(fusion => {
+
+                    mapFusionI.innerHTML += `
+                <div class="map">
+                    <h4 class="tierName">Tier ${fusion.tier}</h4>
+                    <img class="item item1" src="textures/items/${fusion.item1}" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
+                    <img class="item item2" src="textures/items/${fusion.item2}" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
+                    <img class="item itemResult" src="textures/items/${fusion.itemResult}" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
+                    <img class="item itemFuel" src="textures/items/${fusion.itemFuel}" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
+                </div>
+                `;
+
+                });
+
+            }
+
 
         }
 
