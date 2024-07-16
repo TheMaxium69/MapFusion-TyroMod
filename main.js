@@ -83,10 +83,10 @@ function addNewMap(data) {
                     mapFusion.innerHTML += `
                 <div class="map">
                     <h4 class="tierName">Tier ${fusion.tier}</h4>
-                    <img class="item item1" src="textures/items/${fusion.item1}" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
-                    <img class="item item2" src="textures/items/${fusion.item2}" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
-                    <img class="item itemResult" src="textures/items/${fusion.itemResult}" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
-                    <img class="item itemFuel" src="textures/items/${fusion.itemFuel}" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
+                    <img class="item item1" src="textures/items/${fusion.item1}.png" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
+                    <img class="item item2" src="textures/items/${fusion.item2}.png" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
+                    <img class="item itemResult" src="textures/items/${fusion.itemResult}.png" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
+                    <img class="item itemFuel" src="textures/items/${fusion.itemFuel}.png" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
                 </div>
                 `;
 
@@ -108,10 +108,10 @@ function addNewMap(data) {
                     mapFusionI.innerHTML += `
                 <div class="map">
                     <h4 class="tierName">Tier ${fusion.tier}</h4>
-                    <img class="item item1" src="textures/items/${fusion.item1}" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
-                    <img class="item item2" src="textures/items/${fusion.item2}" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
-                    <img class="item itemResult" src="textures/items/${fusion.itemResult}" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
-                    <img class="item itemFuel" src="textures/items/${fusion.itemFuel}" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
+                    <img class="item item1" src="textures/items/${fusion.item1}.png" title="${fusion.item1}" onclick="window.location.href = '?r=${fusion.item1}';">
+                    <img class="item item2" src="textures/items/${fusion.item2}.png" title="${fusion.item2}" onclick="window.location.href = '?r=${fusion.item2}';">
+                    <img class="item itemResult" src="textures/items/${fusion.itemResult}.png" title="${fusion.itemResult}" onclick="window.location.href = '?r=${fusion.itemResult}';">
+                    <img class="item itemFuel" src="textures/items/${fusion.itemFuel}.png" title="${fusion.itemFuel}" onclick="window.location.href = '?r=${fusion.itemFuel}';">
                 </div>
                 `;
 
