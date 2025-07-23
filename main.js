@@ -21,8 +21,8 @@ function getSearchParams() {
 
 function sendSearchRequest(query) {
 
-    var url = 'http://127.0.0.1/Api-TyroModFusion/result.php?itemResult=' + query;
-    // var url = 'http://vps214.tyrolium.fr/api-fusion/result.php?itemResult=' + query;
+    // var url = 'http://127.0.0.1/Api-TyroModFusion/result.php?itemResult=' + query;
+    var url = 'https://api-fusion.tyroserv.fr/result.php?itemResult=' + query;
 
     fetch(url)
         .then(response => response.json())
